@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
-import { FileText, CreditCard, Home, User, Phone, Building } from 'lucide-react';
+import { FileText, CreditCard, Home, User, Phone, Building, Mail, MapPin } from 'lucide-react';
 
 const Index = () => {
   const navigate = useNavigate();
@@ -11,34 +11,34 @@ const Index = () => {
   const formTypes = [
     {
       id: 'aadhaar',
-      title: 'Aadhaar Registration',
-      description: 'Register for new Aadhaar card with complete validation',
+      title: 'Identity Registration',
+      description: 'Register for new identity card with complete validation',
       icon: <User className="h-8 w-8" />,
-      color: 'bg-gradient-to-r from-blue-600 to-indigo-600',
+      color: 'bg-gradient-to-r from-slate-600 to-gray-700',
       route: '/aadhaar-form'
     },
     {
       id: 'pan',
-      title: 'PAN Card Application',
-      description: 'Apply for PAN card with income tax validation',
+      title: 'Tax Card Application',
+      description: 'Apply for tax identification card with income validation',
       icon: <CreditCard className="h-8 w-8" />,
-      color: 'bg-gradient-to-r from-slate-600 to-gray-600',
+      color: 'bg-gradient-to-r from-gray-600 to-slate-700',
       route: '/pan-form'
     },
     {
       id: 'address',
       title: 'Address Verification',
-      description: 'Complete address verification with PIN code validation',
+      description: 'Complete address verification with postal code validation',
       icon: <Home className="h-8 w-8" />,
-      color: 'bg-gradient-to-r from-cyan-600 to-blue-600',
+      color: 'bg-gradient-to-r from-slate-500 to-gray-600',
       route: '/address-form'
     },
     {
       id: 'business',
       title: 'Business Registration',
-      description: 'Register your business with GST and other validations',
+      description: 'Register your business with tax and compliance validations',
       icon: <Building className="h-8 w-8" />,
-      color: 'bg-gradient-to-r from-indigo-600 to-purple-600',
+      color: 'bg-gradient-to-r from-gray-700 to-slate-600',
       route: '/business-form'
     },
     {
@@ -46,37 +46,37 @@ const Index = () => {
       title: 'Contact Information',
       description: 'Verify contact details with OTP validation',
       icon: <Phone className="h-8 w-8" />,
-      color: 'bg-gradient-to-r from-teal-600 to-cyan-600',
+      color: 'bg-gradient-to-r from-slate-600 to-gray-500',
       route: '/contact-form'
     },
     {
       id: 'document',
       title: 'Document Upload',
-      description: 'Upload and validate various government documents',
+      description: 'Upload and validate various official documents',
       icon: <FileText className="h-8 w-8" />,
-      color: 'bg-gradient-to-r from-gray-600 to-slate-600',
+      color: 'bg-gradient-to-r from-gray-600 to-slate-700',
       route: '/document-form'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-50">
       {/* Header */}
-      <header className="bg-white shadow-lg border-b-4 border-blue-600">
+      <header className="bg-white shadow-lg border-b-4 border-slate-600">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-r from-slate-600 to-gray-700 rounded-full flex items-center justify-center">
                 <FileText className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">India Form Validation Portal</h1>
-                <p className="text-sm text-gray-600">Professional Document Processing System</p>
+                <h1 className="text-2xl font-bold text-gray-900">Professional Form Validation Portal</h1>
+                <p className="text-sm text-gray-600">Enterprise Document Processing System</p>
               </div>
             </div>
             <div className="text-right">
               <p className="text-sm text-gray-600">Secure • Reliable • Fast</p>
-              <p className="text-xs text-gray-500">Government Approved Platform</p>
+              <p className="text-xs text-gray-500">Professional Compliance Platform</p>
             </div>
           </div>
         </div>
@@ -87,13 +87,13 @@ const Index = () => {
         <div className="container mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Advanced Form Validation
-            <span className="block text-3xl md:text-5xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className="block text-3xl md:text-5xl bg-gradient-to-r from-slate-600 to-gray-700 bg-clip-text text-transparent">
               Professional Platform
             </span>
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Enterprise-grade form validation system with Indian compliance standards. Validate Aadhaar, PAN, mobile numbers, 
-            PIN codes, and more with real-time feedback and comprehensive error handling.
+            Enterprise-grade form validation system with Indian compliance standards. Validate identity cards, tax documents, mobile numbers, 
+            postal codes, and more with real-time feedback and comprehensive error handling.
           </p>
         </div>
       </section>
@@ -118,7 +118,7 @@ const Index = () => {
                 <CardContent className="pt-0">
                   <Button 
                     onClick={() => navigate(form.route)}
-                    className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 rounded-lg transition-all duration-300 transform group-hover:scale-105 shadow-lg"
+                    className="w-full bg-gradient-to-r from-slate-600 to-gray-700 hover:from-slate-700 hover:to-gray-800 text-white font-semibold py-3 rounded-lg transition-all duration-300 transform group-hover:scale-105 shadow-lg"
                   >
                     Start Application
                   </Button>
@@ -135,13 +135,13 @@ const Index = () => {
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">Professional Validation Features</h3>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { title: 'Aadhaar Validation', desc: 'Real-time Aadhaar number format validation with algorithm check' },
-              { title: 'PAN Verification', desc: 'Complete PAN card format checking with tax compliance' },
-              { title: 'PIN Code System', desc: 'Indian postal code validation with automatic location detection' },
+              { title: 'Identity Validation', desc: 'Real-time identity number format validation with algorithm check' },
+              { title: 'Tax Verification', desc: 'Complete tax card format checking with compliance validation' },
+              { title: 'Postal Code System', desc: 'Indian postal code validation with automatic location detection' },
               { title: 'OTP Security', desc: 'SMS-based mobile number verification with secure authentication' }
             ].map((feature, index) => (
               <div key={index} className="text-center p-6 rounded-lg bg-slate-50 hover:bg-slate-100 transition-colors border border-slate-200">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-r from-slate-600 to-gray-700 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <span className="text-white font-bold text-xl">{index + 1}</span>
                 </div>
                 <h4 className="font-semibold text-gray-900 mb-2">{feature.title}</h4>
@@ -153,24 +153,62 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600">
+      <section className="py-16 bg-gradient-to-r from-slate-600 to-gray-700">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center text-white">
             <div>
               <div className="text-4xl font-bold mb-2">99.9%</div>
-              <div className="text-blue-100">Accuracy Rate</div>
+              <div className="text-slate-100">Accuracy Rate</div>
             </div>
             <div>
               <div className="text-4xl font-bold mb-2">50,000+</div>
-              <div className="text-blue-100">Forms Processed</div>
+              <div className="text-slate-100">Forms Processed</div>
             </div>
             <div>
               <div className="text-4xl font-bold mb-2">24/7</div>
-              <div className="text-blue-100">Support Available</div>
+              <div className="text-slate-100">Support Available</div>
             </div>
             <div>
               <div className="text-4xl font-bold mb-2">100%</div>
-              <div className="text-blue-100">Secure Platform</div>
+              <div className="text-slate-100">Secure Platform</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 bg-slate-100">
+        <div className="container mx-auto px-4">
+          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">Contact Information</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center p-8 bg-white rounded-lg shadow-lg">
+              <div className="w-16 h-16 bg-gradient-to-r from-slate-600 to-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Phone className="h-8 w-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Phone Support</h4>
+              <p className="text-gray-600 mb-2">24/7 Customer Service</p>
+              <p className="text-lg font-semibold text-slate-600">+91-11-4567-8900</p>
+              <p className="text-lg font-semibold text-slate-600">+91-11-4567-8901</p>
+            </div>
+            
+            <div className="text-center p-8 bg-white rounded-lg shadow-lg">
+              <div className="w-16 h-16 bg-gradient-to-r from-slate-600 to-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="h-8 w-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Email Support</h4>
+              <p className="text-gray-600 mb-2">Professional Assistance</p>
+              <p className="text-lg font-semibold text-slate-600">support@formvalidation.in</p>
+              <p className="text-lg font-semibold text-slate-600">help@formvalidation.in</p>
+            </div>
+            
+            <div className="text-center p-8 bg-white rounded-lg shadow-lg">
+              <div className="w-16 h-16 bg-gradient-to-r from-slate-600 to-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="h-8 w-8 text-white" />
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-2">Office Address</h4>
+              <p className="text-gray-600 mb-2">Corporate Headquarters</p>
+              <p className="text-slate-600">123 Business District</p>
+              <p className="text-slate-600">New Delhi - 110001, India</p>
             </div>
           </div>
         </div>
@@ -181,14 +219,14 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h4 className="font-bold text-lg mb-4">India Form Portal</h4>
-              <p className="text-slate-400 text-sm">Professional document validation platform for Indian government forms and applications.</p>
+              <h4 className="font-bold text-lg mb-4">Professional Form Portal</h4>
+              <p className="text-slate-400 text-sm">Enterprise document validation platform for professional form processing and compliance management.</p>
             </div>
             <div>
               <h4 className="font-bold text-lg mb-4">Services</h4>
               <ul className="space-y-2 text-slate-400 text-sm">
-                <li>Aadhaar Registration</li>
-                <li>PAN Card Application</li>
+                <li>Identity Registration</li>
+                <li>Tax Card Application</li>
                 <li>Address Verification</li>
                 <li>Business Registration</li>
               </ul>
@@ -213,7 +251,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-slate-800 mt-8 pt-8 text-center">
-            <p className="text-slate-400">&copy; 2024 India Form Validation Portal. Built with React & Professional Standards.</p>
+            <p className="text-slate-400">&copy; 2024 Professional Form Validation Portal. Built with React & Enterprise Standards.</p>
           </div>
         </div>
       </footer>

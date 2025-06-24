@@ -132,7 +132,7 @@ const Index = () => {
       </div>
 
       {/* Header */}
-      <header className="relative z-10 bg-white/10 backdrop-blur-md shadow-2xl border-b border-white/20">
+      <header className="relative z-10 bg-slate-800/80 backdrop-blur-md shadow-2xl border-b border-slate-700/50">
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
@@ -169,7 +169,7 @@ const Index = () => {
             <Button className="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white px-8 py-3 rounded-xl font-semibold shadow-lg transform hover:scale-105 transition-all duration-300">
               Get Started Now
             </Button>
-            <Button variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-3 rounded-xl font-semibold backdrop-blur-sm">
+            <Button variant="outline" className="border-2 border-blue-400/50 text-blue-100 hover:bg-blue-600/20 hover:border-blue-300 px-8 py-3 rounded-xl font-semibold backdrop-blur-sm transition-all duration-300">
               Learn More
             </Button>
           </div>
@@ -182,21 +182,21 @@ const Index = () => {
           <h3 className="text-4xl font-bold text-center text-white mb-16">Choose Your Application Type</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {formTypes.map((form) => (
-              <Card key={form.id} className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 border-0 overflow-hidden bg-white/10 backdrop-blur-md border border-white/20">
+              <Card key={form.id} className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 border-0 overflow-hidden bg-slate-800/80 backdrop-blur-md border border-slate-700/50 hover:border-blue-400/50">
                 <div className={`h-1 ${form.color}`}></div>
                 <CardHeader className="text-center pb-4">
-                  <div className={`inline-flex p-4 rounded-full ${form.color} text-white mb-4 mx-auto shadow-lg`}>
+                  <div className={`inline-flex p-4 rounded-full ${form.color} text-white mb-4 mx-auto shadow-lg group-hover:shadow-xl transition-all duration-300`}>
                     {form.icon}
                   </div>
-                  <CardTitle className="text-xl font-bold text-white">{form.title}</CardTitle>
-                  <CardDescription className="text-blue-200">
+                  <CardTitle className="text-xl font-bold text-white group-hover:text-blue-200 transition-colors duration-300">{form.title}</CardTitle>
+                  <CardDescription className="text-blue-200 group-hover:text-blue-100 transition-colors duration-300">
                     {form.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="pt-0">
                   <Button 
                     onClick={() => navigate(form.route)}
-                    className={`w-full ${form.color} hover:opacity-90 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform group-hover:scale-105 shadow-lg`}
+                    className={`w-full ${form.color} hover:opacity-90 text-white font-semibold py-3 rounded-xl transition-all duration-300 transform group-hover:scale-105 shadow-lg hover:shadow-xl`}
                   >
                     Start Application
                   </Button>
@@ -208,17 +208,17 @@ const Index = () => {
       </section>
 
       {/* New Features Section */}
-      <section className="relative z-10 py-16 bg-white/5 backdrop-blur-sm">
+      <section className="relative z-10 py-16 bg-slate-800/30 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <h3 className="text-4xl font-bold text-center text-white mb-16">Premium Features</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {newFeatures.map((feature, index) => (
-              <div key={index} className="text-center p-6 rounded-xl bg-white/10 backdrop-blur-md hover:bg-white/15 transition-all duration-300 border border-white/20 group hover:scale-105">
+              <div key={index} className="text-center p-6 rounded-xl bg-slate-800/60 backdrop-blur-md hover:bg-slate-700/70 transition-all duration-300 border border-slate-700/50 hover:border-blue-400/50 group hover:scale-105">
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300`}>
                   {feature.icon}
                 </div>
-                <h4 className="font-semibold text-white mb-2 text-sm">{feature.title}</h4>
-                <p className="text-blue-200 text-xs leading-relaxed">{feature.description}</p>
+                <h4 className="font-semibold text-white mb-2 text-sm group-hover:text-blue-200 transition-colors duration-300">{feature.title}</h4>
+                <p className="text-blue-200 text-xs leading-relaxed group-hover:text-blue-100 transition-colors duration-300">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -236,12 +236,12 @@ const Index = () => {
               { title: 'Postal Code System', desc: 'Comprehensive postal code validation with automatic location detection', icon: <MapPin className="h-8 w-8" /> },
               { title: 'OTP Security', desc: 'SMS-based mobile number verification with secure authentication', icon: <Shield className="h-8 w-8" /> }
             ].map((feature, index) => (
-              <div key={index} className="text-center p-8 rounded-xl bg-white/10 backdrop-blur-md hover:bg-white/15 transition-all duration-300 border border-white/20 group hover:scale-105">
+              <div key={index} className="text-center p-8 rounded-xl bg-slate-800/60 backdrop-blur-md hover:bg-slate-700/70 transition-all duration-300 border border-slate-700/50 hover:border-blue-400/50 group hover:scale-105">
                 <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300">
                   {feature.icon}
                 </div>
-                <h4 className="font-semibold text-white mb-3 text-lg">{feature.title}</h4>
-                <p className="text-blue-200 text-sm leading-relaxed">{feature.desc}</p>
+                <h4 className="font-semibold text-white mb-3 text-lg group-hover:text-blue-200 transition-colors duration-300">{feature.title}</h4>
+                <p className="text-blue-200 text-sm leading-relaxed group-hover:text-blue-100 transition-colors duration-300">{feature.desc}</p>
               </div>
             ))}
           </div>
@@ -249,69 +249,69 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="relative z-10 py-16 bg-gradient-to-r from-blue-800/50 to-indigo-800/50 backdrop-blur-md">
+      <section className="relative z-10 py-16 bg-gradient-to-r from-slate-800/50 to-blue-800/50 backdrop-blur-md">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center text-white">
             <div className="group hover:scale-110 transition-transform duration-300">
               <div className="text-5xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">99.9%</div>
-              <div className="text-blue-200">Accuracy Rate</div>
+              <div className="text-blue-200 group-hover:text-blue-100 transition-colors duration-300">Accuracy Rate</div>
             </div>
             <div className="group hover:scale-110 transition-transform duration-300">
               <div className="text-5xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">100K+</div>
-              <div className="text-blue-200">Forms Processed</div>
+              <div className="text-blue-200 group-hover:text-blue-100 transition-colors duration-300">Forms Processed</div>
             </div>
             <div className="group hover:scale-110 transition-transform duration-300">
               <div className="text-5xl font-bold mb-3 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">24/7</div>
-              <div className="text-blue-200">Support Available</div>
+              <div className="text-blue-200 group-hover:text-blue-100 transition-colors duration-300">Support Available</div>
             </div>
             <div className="group hover:scale-110 transition-transform duration-300">
               <div className="text-5xl font-bold mb-3 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">100%</div>
-              <div className="text-blue-200">Secure Platform</div>
+              <div className="text-blue-200 group-hover:text-blue-100 transition-colors duration-300">Secure Platform</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="relative z-10 py-16 bg-white/5 backdrop-blur-sm">
+      <section className="relative z-10 py-16 bg-slate-800/30 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <h3 className="text-4xl font-bold text-center text-white mb-16">Contact Information</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-white/10 backdrop-blur-md rounded-xl shadow-lg border border-white/20 hover:bg-white/15 transition-all duration-300 group hover:scale-105">
-              <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <div className="text-center p-8 bg-slate-800/60 backdrop-blur-md rounded-xl shadow-lg border border-slate-700/50 hover:bg-slate-700/70 hover:border-blue-400/50 transition-all duration-300 group hover:scale-105">
+              <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <Phone className="h-10 w-10 text-white" />
               </div>
-              <h4 className="text-2xl font-bold text-white mb-3">Phone Support</h4>
-              <p className="text-blue-200 mb-4">24/7 Customer Service</p>
-              <p className="text-lg font-semibold text-blue-300">+91-11-4567-8900</p>
-              <p className="text-lg font-semibold text-blue-300">+91-11-4567-8901</p>
+              <h4 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-200 transition-colors duration-300">Phone Support</h4>
+              <p className="text-blue-200 mb-4 group-hover:text-blue-100 transition-colors duration-300">24/7 Customer Service</p>
+              <p className="text-lg font-semibold text-blue-300 group-hover:text-blue-200 transition-colors duration-300">+91-11-4567-8900</p>
+              <p className="text-lg font-semibold text-blue-300 group-hover:text-blue-200 transition-colors duration-300">+91-11-4567-8901</p>
             </div>
             
-            <div className="text-center p-8 bg-white/10 backdrop-blur-md rounded-xl shadow-lg border border-white/20 hover:bg-white/15 transition-all duration-300 group hover:scale-105">
-              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <div className="text-center p-8 bg-slate-800/60 backdrop-blur-md rounded-xl shadow-lg border border-slate-700/50 hover:bg-slate-700/70 hover:border-blue-400/50 transition-all duration-300 group hover:scale-105">
+              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <Mail className="h-10 w-10 text-white" />
               </div>
-              <h4 className="text-2xl font-bold text-white mb-3">Email Support</h4>
-              <p className="text-blue-200 mb-4">Professional Assistance</p>
-              <p className="text-lg font-semibold text-blue-300">support@formvalidation.in</p>
-              <p className="text-lg font-semibold text-blue-300">help@formvalidation.in</p>
+              <h4 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-200 transition-colors duration-300">Email Support</h4>
+              <p className="text-blue-200 mb-4 group-hover:text-blue-100 transition-colors duration-300">Professional Assistance</p>
+              <p className="text-lg font-semibold text-blue-300 group-hover:text-blue-200 transition-colors duration-300">support@formvalidation.in</p>
+              <p className="text-lg font-semibold text-blue-300 group-hover:text-blue-200 transition-colors duration-300">help@formvalidation.in</p>
             </div>
             
-            <div className="text-center p-8 bg-white/10 backdrop-blur-md rounded-xl shadow-lg border border-white/20 hover:bg-white/15 transition-all duration-300 group hover:scale-105">
-              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <div className="text-center p-8 bg-slate-800/60 backdrop-blur-md rounded-xl shadow-lg border border-slate-700/50 hover:bg-slate-700/70 hover:border-blue-400/50 transition-all duration-300 group hover:scale-105">
+              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300">
                 <MapPin className="h-10 w-10 text-white" />
               </div>
-              <h4 className="text-2xl font-bold text-white mb-3">Office Address</h4>
-              <p className="text-blue-200 mb-4">Corporate Headquarters</p>
-              <p className="text-blue-300">123 Business District</p>
-              <p className="text-blue-300">New Delhi - 110001, India</p>
+              <h4 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-200 transition-colors duration-300">Office Address</h4>
+              <p className="text-blue-200 mb-4 group-hover:text-blue-100 transition-colors duration-300">Corporate Headquarters</p>
+              <p className="text-blue-300 group-hover:text-blue-200 transition-colors duration-300">123 Business District</p>
+              <p className="text-blue-300 group-hover:text-blue-200 transition-colors duration-300">New Delhi - 110001, India</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="relative z-10 bg-slate-900/80 backdrop-blur-md text-white py-12 border-t border-white/20">
+      <footer className="relative z-10 bg-slate-900/90 backdrop-blur-md text-white py-12 border-t border-slate-700/50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
@@ -321,32 +321,32 @@ const Index = () => {
             <div>
               <h4 className="font-bold text-lg mb-4 text-blue-300">Services</h4>
               <ul className="space-y-2 text-blue-200 text-sm">
-                <li className="hover:text-white transition-colors cursor-pointer">Identity Registration</li>
-                <li className="hover:text-white transition-colors cursor-pointer">Tax Card Application</li>
-                <li className="hover:text-white transition-colors cursor-pointer">Address Verification</li>
-                <li className="hover:text-white transition-colors cursor-pointer">Business Registration</li>
+                <li className="hover:text-blue-100 transition-colors cursor-pointer">Identity Registration</li>
+                <li className="hover:text-blue-100 transition-colors cursor-pointer">Tax Card Application</li>
+                <li className="hover:text-blue-100 transition-colors cursor-pointer">Address Verification</li>
+                <li className="hover:text-blue-100 transition-colors cursor-pointer">Business Registration</li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold text-lg mb-4 text-blue-300">Support</h4>
               <ul className="space-y-2 text-blue-200 text-sm">
-                <li className="hover:text-white transition-colors cursor-pointer">Help Center</li>
-                <li className="hover:text-white transition-colors cursor-pointer">Documentation</li>
-                <li className="hover:text-white transition-colors cursor-pointer">Contact Support</li>
-                <li className="hover:text-white transition-colors cursor-pointer">System Status</li>
+                <li className="hover:text-blue-100 transition-colors cursor-pointer">Help Center</li>
+                <li className="hover:text-blue-100 transition-colors cursor-pointer">Documentation</li>
+                <li className="hover:text-blue-100 transition-colors cursor-pointer">Contact Support</li>
+                <li className="hover:text-blue-100 transition-colors cursor-pointer">System Status</li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold text-lg mb-4 text-blue-300">Legal</h4>
               <ul className="space-y-2 text-blue-200 text-sm">
-                <li className="hover:text-white transition-colors cursor-pointer">Privacy Policy</li>
-                <li className="hover:text-white transition-colors cursor-pointer">Terms of Service</li>
-                <li className="hover:text-white transition-colors cursor-pointer">Compliance</li>
-                <li className="hover:text-white transition-colors cursor-pointer">Security</li>
+                <li className="hover:text-blue-100 transition-colors cursor-pointer">Privacy Policy</li>
+                <li className="hover:text-blue-100 transition-colors cursor-pointer">Terms of Service</li>
+                <li className="hover:text-blue-100 transition-colors cursor-pointer">Compliance</li>
+                <li className="hover:text-blue-100 transition-colors cursor-pointer">Security</li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-white/20 mt-8 pt-8 text-center">
+          <div className="border-t border-slate-700/50 mt-8 pt-8 text-center">
             <p className="text-blue-200">&copy; 2024 Professional Form Validation Portal. Built with React & Enterprise Standards.</p>
           </div>
         </div>
